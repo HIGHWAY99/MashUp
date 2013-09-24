@@ -16,12 +16,23 @@ wh = watchhistory.WatchHistory('plugin.video.movie25')
 
 
 def iLive():
+        main.addDir('All [English]','allenglish',120,art+'/ilive.png')
+        main.addDir('Entertainment [English]','entertainmentenglish',120,art+'/ilive.png')
+        main.addDir('Sports [English]','sportsenglish',120,art+'/ilive.png')
+        main.addDir('All','all',120,art+'/ilive.png')
         main.addDir('General','general',120,art+'/ilive.png')
         main.addDir('Entertainment','entertainment',120,art+'/ilive.png')
         main.addDir('Sports','sports',120,art+'/ilive.png')
         main.addDir('News','news',120,art+'/ilive.png')
         main.addDir('Music','music',120,art+'/ilive.png')
         main.addDir('Animation','animation',120,art+'/ilive.png')
+        main.addDir('Family','family',120,art+'/ilive.png')
+        ## Seems to be empty atm ##
+        main.addDir('Lifecaster (Often Empty)','lifecaster',120,art+'/ilive.png')
+        main.addDir('Gaming (Often Empty)','gaming',120,art+'/ilive.png')
+        main.addDir('Mobile (Often Empty)','mobile',120,art+'/ilive.png')
+        main.addDir('Religion (Often Empty)','religion',120,art+'/ilive.png')
+        main.addDir('Radio (Often Empty)','radio',120,art+'/ilive.png')
         main.GA("Live","iLive")
         
 def iLiveList(murl):
@@ -52,9 +63,59 @@ def iLiveList(murl):
                 urllist=['http://www.ilive.to/channels/Music']
         if murl=='animation':
             try:
-                urllist=['http://www.ilive.to/channels/Animation']
+                urllist=['http://www.ilive.to/channels/Animation','http://www.ilive.to/channels/Animation?p=2']
             except:
                 urllist=['http://www.ilive.to/channels/Animation']
+        if murl=='family':
+            try:
+                urllist=['http://www.ilive.to/channels/Family']
+            except:
+                urllist=['http://www.ilive.to/channels/Family']
+        if murl=='lifecaster':
+            try:
+                urllist=['http://www.ilive.to/channels/Lifecaster']
+            except:
+                urllist=['http://www.ilive.to/channels/Lifecaster']
+        if murl=='gaming':
+            try:
+                urllist=['http://www.ilive.to/channels/Gaming']
+            except:
+                urllist=['http://www.ilive.to/channels/Gaming']
+        if murl=='mobile':
+            try:
+                urllist=['http://www.ilive.to/channels/Mobile']
+            except:
+                urllist=['http://www.ilive.to/channels/Mobile']
+        if murl=='religion':
+            try:
+                urllist=['http://www.ilive.to/channels/Religion']
+            except:
+                urllist=['http://www.ilive.to/channels/Religion']
+        if murl=='radio':
+            try:
+                urllist=['http://www.ilive.to/channels/Radio']
+            except:
+                urllist=['http://www.ilive.to/channels/Radio']
+        if murl=='all':
+            try:
+                urllist=['http://www.ilive.to/channels','http://www.ilive.to/channels?p=2','http://www.ilive.to/channels?p=3','http://www.ilive.to/channels?p=4','http://www.ilive.to/channels?p=5','http://www.ilive.to/channels?p=6','http://www.ilive.to/channels?p=7','http://www.ilive.to/channels?p=8','http://www.ilive.to/channels?p=9','http://www.ilive.to/channels?p=10','http://www.ilive.to/channels?p=11','http://www.ilive.to/channels?p=12','http://www.ilive.to/channels?p=13','http://www.ilive.to/channels?p=14','http://www.ilive.to/channels?p=15','http://www.ilive.to/channels?p=16']
+            except:
+                urllist=['http://www.ilive.to/channels','http://www.ilive.to/channels?p=2','http://www.ilive.to/channels?p=3','http://www.ilive.to/channels?p=4','http://www.ilive.to/channels?p=5','http://www.ilive.to/channels?p=6','http://www.ilive.to/channels?p=7','http://www.ilive.to/channels?p=8','http://www.ilive.to/channels?p=9','http://www.ilive.to/channels?p=10']
+        if murl=='allenglish':
+            try:
+                urllist=['http://www.ilive.to/channels?lang=1','http://www.ilive.to/channels?lang=1&p=2','http://www.ilive.to/channels?lang=1&p=3','http://www.ilive.to/channels?lang=1&p=4','http://www.ilive.to/channels?lang=1&p=5','http://www.ilive.to/channels?lang=1&p=6','http://www.ilive.to/channels?lang=1&p=7','http://www.ilive.to/channels?lang=1&p=8','http://www.ilive.to/channels?lang=1&p=9','http://www.ilive.to/channels?lang=1&p=10']
+            except:
+                urllist=['http://www.ilive.to/channels?lang=1','http://www.ilive.to/channels?lang=1&p=2','http://www.ilive.to/channels?lang=1&p=3','http://www.ilive.to/channels?lang=1&p=4','http://www.ilive.to/channels?lang=1&p=5','http://www.ilive.to/channels?lang=1&p=6','http://www.ilive.to/channels?lang=1&p=7','http://www.ilive.to/channels?lang=1&p=8','http://www.ilive.to/channels?lang=1&p=9']
+        if murl=='entertainmentenglish':
+            try:
+                urllist=['http://www.ilive.to/channels/Entertainment?lang=1','http://www.ilive.to/channels/Entertainment?lang=1&p=2','http://www.ilive.to/channels/Entertainment?lang=1&p=3','http://www.ilive.to/channels/Entertainment?lang=1&p=4','http://www.ilive.to/channels/Entertainment?lang=1&p=5','http://www.ilive.to/channels/Entertainment?lang=1&p=6']
+            except:
+                urllist=['http://www.ilive.to/channels/Entertainment?lang=1','http://www.ilive.to/channels/Entertainment?lang=1&p=2','http://www.ilive.to/channels/Entertainment?lang=1&p=3','http://www.ilive.to/channels/Entertainment?lang=1&p=4','http://www.ilive.to/channels/Entertainment?lang=1&p=5']
+        if murl=='sportsenglish':
+            try:
+                urllist=['http://www.ilive.to/channels/Sport?lang=1','http://www.ilive.to/channels/Sport?lang=1&p=2']
+            except:
+                urllist=['http://www.ilive.to/channels/Sport?lang=1']
         dialogWait = xbmcgui.DialogProgress()
         ret = dialogWait.create('Please wait until channel list is loaded.')
         totalLinks = len(urllist)
@@ -64,13 +125,13 @@ def iLiveList(murl):
         for durl in urllist:
                 link=main.OPENURL(durl)
                 link=link.replace('\r','').replace('\n','').replace('\t','').replace('&nbsp;','')
-                match=re.compile('src=".+?" alt=".+?<img width=".+?" height=".+?" src="([^<]+)" alt=".+?"/></noscript></a><a href="(.+?)"><strong>(.+?)</strong></a><br/>').findall(link)
-                for thumb,url,name in match:
+                match=re.compile('src=".+?" alt=".+?<img width=".+?" height=".+?" src="([^<]+)" alt=".+?"/></noscript></a><a href="(.+?)"><strong>(.+?)</strong></a><br/>.+?<a href="http://[A-Za-z0-9\.]*/channels\?lang=\d*">([A-Za-z]*)</a>').findall(link) #match=re.compile('src=".+?" alt=".+?<img width=".+?" height=".+?" src="([^<]+)" alt=".+?"/></noscript></a><a href="(.+?)"><strong>(.+?)</strong></a><br/>').findall(link)
+                for thumb,url,name,lang in match: #for thumb,url,name in match:
                         match=re.compile('Hongkong').findall(name)
                         match2=re.compile('sex').findall(name)
                         if len(match)==0 and len(match2)==0:
                                 if name != 'Playboy TV':
-                                        main.addPlayL(name,url,121,thumb,'','','','','')
+                                        main.addPlayL(name+'  ['+lang+']',url,121,thumb,'','','','','') #main.addPlayL(name,url,121,thumb,'','','','','')
                 
                 loadedLinks = loadedLinks + 1
                 percent = (loadedLinks * 100)/totalLinks
